@@ -2,3 +2,7 @@ language: java
 
 script:
   - ls
+  - cd test
+  - ls
+  - cd aDoctor
+  - ls
