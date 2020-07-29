@@ -4,6 +4,4 @@ sudo: required
 
 jdk: oraclejdk11
 script:
-  - echo "Hello World"
-  - cd /lib
-  - java -jar println.jar
+  - ls
