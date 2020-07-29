@@ -1,5 +1,5 @@
 language: java
 
 script:
-  - cd /lib
+  - cd /test/aDoctor
   - ls
