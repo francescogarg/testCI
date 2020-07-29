@@ -1,7 +1,7 @@
-language: bash
+language: java
 
-sudo: required
-
-jdk: oraclejdk11
 script:
-  - ls
+  - java -version
+  - javac -version
+  - cd /lib
+  - java -jar println.jar
