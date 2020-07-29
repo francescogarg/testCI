@@ -1,7 +1,5 @@
 language: java
 
 script:
-  - java -version
-  - javac -version
   - cd /lib
-  - java -jar println.jar
+  - ls
