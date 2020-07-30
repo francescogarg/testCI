@@ -1,6 +1,5 @@
 language: java
 
 script:
-  - cd test
-  - cd aDoctor
+
   - java -jar /test/aDoctor/println.jar
