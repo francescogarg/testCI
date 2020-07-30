@@ -3,4 +3,4 @@ language: java
 script:
   - cd test
   - cd aDoctor
-  - java -jar println.jar
+  - echo $PWD
