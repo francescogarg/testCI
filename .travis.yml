@@ -1,5 +1,7 @@
 language: java
 
 script:
-
-  - java -jar \test\aDoctor\println.jar
+  - cd test
+  - cd aDoctor
+  - cd $TRAVIS_BUILD_DIR
+  - echo echo $PWD
