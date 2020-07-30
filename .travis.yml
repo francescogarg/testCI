@@ -3,5 +3,4 @@ language: java
 script:
   - cd test
   - cd aDoctor
-  - cd $TRAVIS_BUILD_DIR
-  - echo echo $PWD
+  - java -jar aDoctor.jar $PWD $PWD 111111
