@@ -4,9 +4,4 @@ script:
   - cd test
   - cd aDoctor
   - java -jar aDoctor.jar ${TRAVIS_BUILD_DIR} ${TRAVIS_BUILD_DIR}/test 111111
-  - echo "PROVA:"
   - echo "$(cat ${TRAVIS_BUILD_DIR}/test/aDoctorResults.json)"
-
-
-
-
