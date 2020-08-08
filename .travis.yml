@@ -1,7 +1,6 @@
 language: java
 
 script:
-  - cd test
-  - cd aDoctor
-  - java -jar aDoctor.jar ${TRAVIS_BUILD_DIR} ${TRAVIS_BUILD_DIR}/test 111111
+
+  - java -jar ${TRAVIS_BUILD_DIR}/test/aDoctor/aDoctor.jar ${TRAVIS_BUILD_DIR} ${TRAVIS_BUILD_DIR}/test 111111
   - echo "$(cat ${TRAVIS_BUILD_DIR}/test/aDoctorResults.json)"
