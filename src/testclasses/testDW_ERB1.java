@@ -1,8 +1,6 @@
-package testclasses;
+package testPackage;
 
 public class testDW_ERB1 {
-
-
     private LocationManager lm;
     private LocationManager lm2;
 
@@ -39,5 +37,4 @@ public class testDW_ERB1 {
         wakeLock3.acquire();
         wakeLock3.release();
     }
-
 }

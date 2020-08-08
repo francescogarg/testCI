@@ -1,4 +1,4 @@
-package testclasses;
+package testPackage;
 
 public class testDW1 {
     public void foo() {
@@ -19,5 +19,4 @@ public class testDW1 {
         PowerManager.WakeLock wakeLock4 = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK | PowerManager.ON_AFTER_RELEASE, "wakelock4");
         wakeLock4.acquire();
     }
-
 }
