@@ -3,6 +3,11 @@ script:
 - java -jar ${TRAVIS_BUILD_DIR}/test/aDoctor/aDoctor.jar ${TRAVIS_BUILD_DIR} ${TRAVIS_BUILD_DIR}/test
   111111
 - echo "$(cat ${TRAVIS_BUILD_DIR}/test/aDoctorResults.json)"
+
+
 before_install:
 - openssl aes-256-cbc -K $encrypted_189e52c2c347_key -iv $encrypted_189e52c2c347_iv -in deploy_key.enc -out deploy_key -d
+- chmod 600 deploy_key
+- eval $(ssh-agent -s)
+- ssh-add deploy_key
 
