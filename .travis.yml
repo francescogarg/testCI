@@ -1,7 +1,11 @@
+env:
+  - LOG_FOLDER="test/logs"
+  - LOG_FILENAME=$TRAVIS_BUILD_NUMBER
+
 script:
-- java -jar ${TRAVIS_BUILD_DIR}/test/aDoctor/aDoctor.jar ${TRAVIS_BUILD_DIR} ${TRAVIS_BUILD_DIR}/test
+- echo ${TRAVIS_BUILD_DIR}/$LOG_FOLDER/$LOG_FILENAME
+- java -jar ${TRAVIS_BUILD_DIR}/test/aDoctor/aDoctor.jar ${TRAVIS_BUILD_DIR} ${TRAVIS_BUILD_DIR}/$LOG_FOLDER/$LOG_FILENAME
   111111
-- echo "$(cat ${TRAVIS_BUILD_DIR}/test/aDoctorResults.json)"
 
 
 
