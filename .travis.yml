@@ -1,10 +1,7 @@
-env:
-  - LOG_FOLDER=test/logs
-  - LOG_FILENAME=$TRAVIS_BUILD_NUMBER.json
-
 script:
-- echo ${TRAVIS_BUILD_DIR}/$LOG_FOLDER/$LOG_FILENAME
-- java -jar ${TRAVIS_BUILD_DIR}/test/aDoctor/aDoctor.jar ${TRAVIS_BUILD_DIR} ${TRAVIS_BUILD_DIR}/$LOG_FOLDER/$LOG_FILENAME
+- java -jar
+  ${TRAVIS_BUILD_DIR}/test/aDoctor/aDoctor.jar
+  ${TRAVIS_BUILD_DIR} ${TRAVIS_BUILD_DIR}/test/logs/${TRAVIS_BUILD_NUMBER}.json
   111111
 
 
