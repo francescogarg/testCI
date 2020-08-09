@@ -18,4 +18,4 @@ after_success:
   - git remote set-url origin git@github.com:francescogarg/testCI.git
   - git add --all *.json
   - git commit -m "travis build $TRAVIS_BUILD_NUMBER"
-  - git push --force origin master
+  - git push origin HEAD:master
