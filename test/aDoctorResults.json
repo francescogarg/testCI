@@ -1,21 +1,9 @@
 [
   {
-    "Class Name": "testERB1.java",
-    "Smell Description": "Early Resource Binding is present when an Android system service is used in the onCreate(Bundle) method of an Activity subclass.",
-    "Smell Name": "Early Resource Binding",
-    "Location": "/home/travis/build/francescogarg/testCI/src/testclasses/testERB1.java"
-  },
-  {
     "Class Name": "testDW_ERB1.java",
     "Smell Description": "Member Ignoring Method is present when a non static method does not use at all instance variables and other non static methods.",
     "Smell Name": "Member Ignoring Method",
     "Location": "/home/travis/build/francescogarg/testCI/src/testclasses/testDW_ERB1.java"
-  },
-  {
-    "Class Name": "testDW1.java",
-    "Smell Description": "Durable Wakelock is present when there is a PowerManager.WakeLock instance that calls an acquire() without setting a timeout or without calling the corresponding release()",
-    "Smell Name": "Durable Wakelock",
-    "Location": "/home/travis/build/francescogarg/testCI/src/testclasses/testDW1.java"
   },
   {
     "Class Name": "testDW1.java",
