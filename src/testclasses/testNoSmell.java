@@ -1,7 +1,7 @@
-package testPackage;
+package testclasses;
 
 public class testNoSmell {
-    public static void foo() {
+    public void foo() {
         PowerManager.WakeLock wakeLock4 = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK | PowerManager.ON_AFTER_RELEASE, "wakelock4");
         wakeLock4.acquire();
         wakeLock4.release();

@@ -1,14 +1,12 @@
-package testPackage;
+package testclasses;
 
 public class testDW1 {
-    public static void foo() {
+    public void foo() {
         PowerManager.WakeLock wakeLock1 = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK | PowerManager.ON_AFTER_RELEASE, "wakelock1");
         wakeLock1.acquire();
 
         PowerManager.WakeLock wakeLock2 = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK | PowerManager.ON_AFTER_RELEASE, "wakelock2");
         wakeLock2.acquire();
-		wakeLock1.release();
-		wakeLock2.relea static se();
     }
 
     public void foo2() {

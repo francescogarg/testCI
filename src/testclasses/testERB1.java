@@ -1,4 +1,4 @@
-package testPackage;
+package testclasses;
 
 public class testERB1 {
     private LocationManager lm;
@@ -11,12 +11,14 @@ public class testERB1 {
         lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         if (lm.getAllProviders().contains(LocationManager.GPS_PROVIDER)) {
             if (lm.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+                lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 0, (LocationListener) this);
             }
         }
 
         lm2 = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         if (lm2.getAllProviders().contains(LocationManager.GPS_PROVIDER)) {
             if (lm2.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+                lm2.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 0, (LocationListener) this);
             }
         }
 
@@ -27,9 +29,4 @@ public class testERB1 {
             }
         }
     }
-
-	public void onResume() {
-		lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 0, (LocationListener) this);
-		lm2.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 0, (LocationListener) this);
-	}
 }
