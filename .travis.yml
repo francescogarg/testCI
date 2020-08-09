@@ -1,4 +1,5 @@
 script:
+- echo ${TRAVIS_BUILD_DIR}/test/logs/${TRAVIS_BUILD_NUMBER}.json
 - java -jar ${TRAVIS_BUILD_DIR}/test/aDoctor/aDoctor.jar ${TRAVIS_BUILD_DIR} ${TRAVIS_BUILD_DIR}/test/logs/${TRAVIS_BUILD_NUMBER}.json 111111
 
 
