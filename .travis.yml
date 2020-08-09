@@ -10,12 +10,12 @@ before_install:
 - chmod 600 deploy_key
 - eval $(ssh-agent -s)
 - ssh-add deploy_key
-- git remote set-url origin git@github.com:francescogarg/testCI.git
 
 
 after_success:
   - git config --global user.email "travis@travis-ci.orgt"
   - git config --global user.name "TravisCI"
+  - git remote set-url origin git@github.com:francescogarg/testCI.git
   - git add --all *.json
   - git commit -m "travis build $TRAVIS_BUILD_NUMBER"
-  - git push origin master
+  - git push --force origin master
