@@ -13,8 +13,8 @@ before_install:
 
 
 after_success:
-  - git config --global user.email "f.gargiulo18@studenti.unisa.it"
-  - git config --global user.name "francescogarg"
+  - git config --global user.email "travis@travis-ci.orgt"
+  - git config --global user.name "TravisCI"
   - git add --all *.json
   - git commit -m "travis build $TRAVIS_BUILD_NUMBER"
-  - git push -q origin
+  - git push -q origin master
