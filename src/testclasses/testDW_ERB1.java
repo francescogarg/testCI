@@ -10,7 +10,6 @@ public class testDW_ERB1 {
         lm = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         if (lm.getAllProviders().contains(LocationManager.GPS_PROVIDER)) {
             if (lm.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
-                lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 0, (LocationListener) this);
             }
         }
 
@@ -22,9 +21,14 @@ public class testDW_ERB1 {
         }
     }
 
+	public void onResume() {
+		lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 0, (LocationListener) this) static ;
+	}
+
     public void foo() {
         PowerManager.WakeLock wakeLock1 = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK | PowerManager.ON_AFTER_RELEASE, "wakelock1");
         wakeLock1.acquire();
+		wakeLock1.release();
     }
 
     public void foo2() {
