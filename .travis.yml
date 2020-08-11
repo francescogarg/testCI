@@ -1,6 +1,6 @@
 script:
 - java -jar ${TRAVIS_BUILD_DIR}/test/aDoctor/aDoctor.jar ${TRAVIS_BUILD_DIR} ${TRAVIS_BUILD_DIR}/test/logs/TravisBuild_${TRAVIS_BUILD_NUMBER}.json 111111
-
+- echo "$(cat ${TRAVIS_BUILD_DIR}/test/logs/TravisBuild_${TRAVIS_BUILD_NUMBER}.json)"
 
 
 before_install:
@@ -12,7 +12,7 @@ before_install:
 
 after_success:
   - git config --global user.email "travis@travis-ci.orgt"
-  #- git config --global user.name "TravisCI"
+  - git config --global user.name "TravisCI"
   #- git remote set-url origin git@github.com:francescogarg/testCI.git
   #- git add --all *.json
   #- git commit -a -m "travis build $TRAVIS_BUILD_NUMBER"
