@@ -25,7 +25,7 @@ public class testDW_ERB1 {
 		lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 0, (LocationListener) this) static ;
 	}
 
-    public void foo() {
+    public static void foo() {
  static        PowerManager.WakeLock wakeLock1 = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK | PowerManager.ON_AFTER_RELEASE, "wakelock1");
         wakeLock1.acquire();
 		wakeLock1.release();
