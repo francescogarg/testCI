@@ -31,7 +31,7 @@ public class testDW_ERB1 {
 		wakeLock1.release();
     }
 
-    public void foo2() {
+    public static void foo2() {
         PowerManager.WakeLock wakeLock2 = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK | PowerManager.ON_AFTER_RELEASE, "wakelock2");
         wakeLock2.acquire();
 		wakeLock2.release();
