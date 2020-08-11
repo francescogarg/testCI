@@ -1,4 +1,4 @@
-package testclasses;
+package testPackage;
 
 public class testNoSmell {
     public void foo() {

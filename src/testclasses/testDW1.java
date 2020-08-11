@@ -1,4 +1,4 @@
-package testclasses;
+package testPackage;
 
 public class testDW1 {
     public void foo() {
@@ -9,15 +9,14 @@ public class testDW1 {
         wakeLock2.acquire();
     }
 
-    public static void foo2() {
+    public void foo2() {
         PowerManager.WakeLock wakeLock3 = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK | PowerManager.ON_AFTER_RELEASE, "wakelock3");
         wakeLock3.acquire();
         wakeLock3.release();
     }
 
-    public static void foo3() {
+    public void foo3() {
         PowerManager.WakeLock wakeLock4 = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK | PowerManager.ON_AFTER_RELEASE, "wakelock4");
         wakeLock4.acquire();
-		wakeLock4.release();
     }
 }
