@@ -7,6 +7,8 @@ public class testDW1 {
 
         PowerManager.WakeLock wakeLock2 = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK | PowerManager.ON_AFTER_RELEASE, "wakelock2");
         wakeLock2.acquire();
+		wakeLock1.release();
+		wakeLock2.release();
     }
 
     public void foo2() {
@@ -18,5 +20,6 @@ public class testDW1 {
     public void foo3() {
         PowerManager.WakeLock wakeLock4 = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK | PowerManager.ON_AFTER_RELEASE, "wakelock4");
         wakeLock4.acquire();
+		wakeLock4.release();
     }
 }
