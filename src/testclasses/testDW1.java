@@ -1,4 +1,4 @@
-package testPackage;
+package testclasses;
 
 public class testDW1 {
     public void foo() {

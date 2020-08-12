@@ -1,4 +1,4 @@
-package testPackage;
+package testclasses;
 
 public class testERB1 {
     private LocationManager lm;
