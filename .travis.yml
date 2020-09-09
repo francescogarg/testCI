@@ -1,18 +1,17 @@
 script:
+- echo ${TRAVIS_BUILD_DIR}
 - java -jar ${TRAVIS_BUILD_DIR}/test/aDoctor/aDoctor.jar ${TRAVIS_BUILD_DIR} ${TRAVIS_BUILD_DIR}/test/logs/TravisBuild_${TRAVIS_BUILD_NUMBER}.json 111111
 - echo "$(cat ${TRAVIS_BUILD_DIR}/test/logs/TravisBuild_${TRAVIS_BUILD_NUMBER}.json)"
 
 
-before_install:
-- openssl aes-256-cbc -K $encrypted_189e52c2c347_key -iv $encrypted_189e52c2c347_iv -in deploy_key.enc -out deploy_key -d
-- chmod 600 deploy_key
-- eval $(ssh-agent -s)
-- ssh-add deploy_key
-
-
-after_success:
-  - git config --global user.email "travis@travis-ci.orgt"
-  - git config --global user.name "TravisCI"
+#before_install:
+#- openssl aes-256-cbc -K $encrypted_189e52c2c347_key -iv $encrypted_189e52c2c347_iv -in deploy_key.enc -out deploy_key -d
+#- chmod 600 deploy_key
+#- eval $(ssh-agent -s)
+#- ssh-add deploy_key
+#after_success:
+  #- git config --global user.email "travis@travis-ci.orgt"
+  #- git config --global user.name "TravisCI"
   #- git remote set-url origin git@github.com:francescogarg/testCI.git
   #- git add --all *.json
   #- git commit -a -m "travis build $TRAVIS_BUILD_NUMBER"
