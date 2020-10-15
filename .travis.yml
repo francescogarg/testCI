@@ -1,12 +1,10 @@
-language: bash
-script:
-  - echo "Hello World!"
 
 
-  #script:
-#- echo ${TRAVIS_BUILD_DIR}
-#- java -jar ${TRAVIS_BUILD_DIR}/test/aDoctor/aDoctor.jar ${TRAVIS_BUILD_DIR} ${TRAVIS_BUILD_DIR}/test/logs/TravisBuild_${TRAVIS_BUILD_NUMBER}.json 111111
-#- echo "$(cat ${TRAVIS_BUILD_DIR}/test/logs/TravisBuild_${TRAVIS_BUILD_NUMBER}.json)"
+
+  script:
+- echo ${TRAVIS_BUILD_DIR}
+- java -jar ${TRAVIS_BUILD_DIR}/test/aDoctor/aDoctor.jar ${TRAVIS_BUILD_DIR} ${TRAVIS_BUILD_DIR}/test/logs/TravisBuild_${TRAVIS_BUILD_NUMBER}.json 111111
+- echo "$(cat ${TRAVIS_BUILD_DIR}/test/logs/TravisBuild_${TRAVIS_BUILD_NUMBER}.json)"
 
 
 #before_install:
